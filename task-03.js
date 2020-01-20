@@ -2,34 +2,14 @@
 
 const writePass = prompt('Введите пароль, ASAP!!!');
 const ADMIN_PASSWORD = 'jqueryismyjam';
+let message;
 
-
-if (writePass == '' || writePass == null){
-  alert ('Отменено пользователем :(');
+if (writePass === ADMIN_PASSWORD) {
+    message = 'Добро пожаловать!';
+} else if (writePass === null) {
+    message = 'Отменено пользователем !';
+} else {
+    message = 'Доступ запрещен, неверный пароль!';
 }
 
-else if 
-(ADMIN_PASSWORD == 'jqueryismyjam') {
-    alert ('Добро пожаловать!!!');
-}
-
-else if (ADMIN_PASSWORD == '' || ADMIN_PASSWORD == null) {
-    alert ('Доступ запрещен, неверный пароль!');
-}
-
-
-
-
-
-// const clicCancel = null;
-// message = 'Отменено пользователем';
-
-// if(clicCancel = true){
-//     message = 'Отменено пользователем';
-// }
-
-
-// if(ADMIN_PASSWORD){
-//     message = ('Добро пожаловать!');
-//  }
-
+alert(message);
