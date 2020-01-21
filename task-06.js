@@ -8,11 +8,12 @@ while (true) {
 
     if (input === null) {
         break;
-    } else if (isNaN(input)) {
+    } 
+    input = Number(input);
+    if (Number.isNaN(input)) {
         alert('Было введено не число, попробуйте еще раз')
         continue;
     }
-    input = Number(input);
     total += input;
 }
 alert(`Общая сумма чисел равна ${total}`);

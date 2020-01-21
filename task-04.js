@@ -8,9 +8,11 @@ const totalAmount = userChoise * pricePerDroid;
 const summCredit = credits - totalAmount;
 let message;
 
-if (userChoise === '' || userChoise === null) {
+if (userChoise === null) {
     message = 'Отменено пользователем!';
-} else if (totalAmount > credits) {
+} else if (userChoise === ''){
+    message = 'Вы ничего не ввели!'
+}else if (totalAmount > credits) {
     message = 'Недостаточно средств на счету!';
 } else {
     message = `Вы купили ${userChoise} дроидов, на счету осталось ${summCredit} кредитов.`
